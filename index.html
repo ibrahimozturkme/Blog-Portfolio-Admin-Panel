@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>İbrahim ÖZTÜRK - Full Stack Developer</title>
+
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap-flex.min.css">
+     <link rel="stylesheet" href="assets/plugins/tether/css/tether.min.css">
+     <link rel="stylesheet" href="assets/plugins/jQueryFiler/css/jquery.filer.css">
+     <link rel="stylesheet" href="assets/plugins/toastr8/toastr8.min.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/tether/js/tether.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/jQueryFiler/js/jquery.filer.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/toastr8/toastr8.min.js"></script>
+     <script type="text/javascript" src="assets/js/app.js"></script>
+
+</head>
+<body>
+
+     <nav class="navbar navbar-light" id="menu">
+          <div class="container">
+               <a href="index.html" class="navbar-brand"><img src="https://secure.gravatar.com/avatar/efd3ffa5fedfce14ee1ab9709b37f237?s=64" alt=""></a>
+               <a href="index.html" class="navbar-brand hidden-xs-down">ibrahimozturk.me</a>
+               <form class="form-inline">
+                    <div class="input-group">
+                         <input type="text" name="q" class="form-control" placeholder="Ara...">
+                         <div class="input-group-btn dropdown hidden-xs-down">
+                              <button class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"><i class="material-icons">add</i></button>
+                              <div class="dropdown-menu">
+                                   <a href="add_article.html" class="dropdown-item">Yazı Ekle</a>
+                                   <a href="add_work.html" class="dropdown-item">Referans Ekle</a>
+                                   <a href="tags.html" class="dropdown-item">Etiket Ekle</a>
+                              </div>
+                         </div>
+                    </div>
+               </form>
+               <ul class="nav navbar-nav float-xs-right">
+                    <li class="nav-item hidden-md-up"><a href="" id="search-toggle" class="nav-link"><i class="material-icons">search</i></a></li>
+                    <li class="nav-item dropdown hidden-md-up">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">library_add</i></a>
+                         <div class="dropdown-menu dropdown-menu-right">
+                              <a href="add_article.html" class="dropdown-item">Yazı Ekle</a>
+                              <a href="add_work.html" class="dropdown-item">Referans Ekle</a>
+                              <a href="tags.html" class="dropdown-item">Etiket Ekle</a>
+                         </div>
+                    </li>
+                    <li class="nav-item dropdown ml-2">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">inbox</i> <span class="tag tag-pill tag-danger">1</span></a>
+                         <div class="dropdown-menu dropdown-menu-right wide">
+                              <div class="header">Gelen Kutusu <div class="tag tag-pill tag-danger">1</div></div>
+                              <div class="list-group">
+                                   <a href="" class="list-group-item list-group-item-warning">
+                                        <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Melike Babaoğlu <span class="time">10 dakika önce</span></p>
+                                             <p class="email">melike.babaoğlu@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Oğuzhan Çağıran <span class="time">10 dakika önce</span></p>
+                                             <p class="email">oğuzhan.çağıran@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Oya Aybar <span class="time">10 dakika önce</span></p>
+                                             <p class="email">oya.aybar@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                              </div>
+                              <a href="inbox.html" class="btn btnn-block btn-outline-secondary">Gelen kutusuna git</a>
+                         </div>
+                    </li>
+                    <li class="nav-item dropdown ml-2">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">notifications</i> <span class="tag tag-pill tag-danger">1</span></a>
+                         <div class="dropdown-menu dropdown-menu-right wide">
+                              <div class="header">Yorumlar <div class="tag tag-pill tag-danger">1</div></div>
+                              <div class="list-group">
+                                   <a href="" class="list-group-item list-group-item-warning">
+                                        <img src="https://randomuser.me/api/portraits/women/80.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Elif Mayhoş <span class="time">10 dakika önce</span></p>
+                                             <p class="email">ted.bryant54@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Deniz Ekşioğlu <span class="time">10 dakika önce</span></p>
+                                             <p class="email">deniz.ekşioğlu@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Efe Yetkiner <span class="time">10 dakika önce</span></p>
+                                             <p class="email">efe.yetkiner@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                              </div>
+                              <a href="comments.html" class="btn btnn-block btn-outline-secondary">Yorumlara git</a>
+                         </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+                         <div class="dropdown-menu dropdown-menu-right">
+                              <a href="articles.html" class="dropdown-item"><i class="material-icons">format_align_left</i> <span>Yazılar</span></a>
+                              <a href="works.html" class="dropdown-item"><i class="material-icons">work</i> <span>Referanslar</span></a>
+                              <a href="tags.html" class="dropdown-item"><i class="material-icons">label</i> <span>Etiketler</span></a>
+                              <div class="dropdown-divider"></div>
+                              <a href="settings.html" class="dropdown-item"><i class="material-icons">settings</i> <span>Ayarlar</span></a>
+                              <a href="login.html" class="dropdown-item"><i class="material-icons">exit_to_app</i> <span>Çıkış Yap</span></a>
+                         </div>
+                    </li>
+               </ul>
+          </div>
+     </nav>
+     <nav class="navbar navbar-light bg-faded" id="submenu">
+          <div class="container">
+               <div class="navbar-brand m-0">
+                    <p>Yönetim Paneli</p>
+                    <small>Hoşgeldin İbrahim</small>
+               </div>
+          </div>
+     </nav>
+
+     <div id="content" class="mt-2">
+          <div class="container">
+
+               <div class="row">
+                    <div class="col-lg-2">
+                         <div class="card card-blue mini-widget">
+                              <i class="material-icons">format_align_left</i>
+                              <div class="card-block">
+                                   <p class="lead">Yazı</p>
+                                   <p class="count">65</p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-2">
+                         <div class="card card-indigo mini-widget">
+                              <i class="material-icons">work</i>
+                              <div class="card-block">
+                                   <p class="lead">Referans</p>
+                                   <p class="count">65</p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-2">
+                         <div class="card card-yellow mini-widget">
+                              <i class="material-icons">label_outline</i>
+                              <div class="card-block">
+                                   <p class="lead">Etiket</p>
+                                   <p class="count">65</p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-2">
+                         <div class="card card-red mini-widget">
+                              <i class="material-icons">inbox</i>
+                              <div class="card-block">
+                                   <p class="lead">Gelen Kutusu</p>
+                                   <p class="count">65</p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-2">
+                         <div class="card card-dark-red mini-widget">
+                              <i class="material-icons">favorite_outline</i>
+                              <div class="card-block">
+                                   <p class="lead">Beğeni</p>
+                                   <p class="count">65</p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-lg-2">
+                         <div class="card card-teal mini-widget">
+                              <i class="material-icons">chat_bubble_outline</i>
+                              <div class="card-block">
+                                   <p class="lead">Yorum</p>
+                                   <p class="count">65</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="row">
+                    <div class="col-lg-4">
+                         <div class="card card-warning widget" id="note-widget">
+                              <div class="card-header">
+                                   <i class="material-icons">list</i>
+                                   Hızlı Not
+                                   <button class="btn btn-warning" id="delete"><i class="material-icons">delete</i></button>
+                                   <button class="btn btn-warning" data-toggle="collapse" data-target="#add_note"><i class="material-icons">add</i></button>
+                              </div>
+                              <div class="card-block collapse" id="add_note">
+                                   <button id="add" class="btn fab btn-warning"><i class="material-icons">send</i></button>
+                                   <div id="note" contenteditable="true"></div>
+                              </div>
+                              <ul class="list-group list-group-flush">
+                                   <li class="list-group-item">
+                                        <label class="custom-control custom-checkbox">
+                                             <input type="checkbox" class="custom-control-input" data-id="3">
+                                             <span class="custom-control-indicator"></span>
+                                             <span class="custom-control-description">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</span>
+                                        </label>
+                                   </li>
+                                   <li class="list-group-item">
+                                        <label class="custom-control custom-checkbox">
+                                             <input type="checkbox" class="custom-control-input" data-id="1">
+                                             <span class="custom-control-indicator"></span>
+                                             <span class="custom-control-description">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır.</span>
+                                        </label>
+                                   </li>
+                                   <li class="list-group-item">
+                                        <label class="custom-control custom-checkbox">
+                                             <input type="checkbox" class="custom-control-input" data-id="3">
+                                             <span class="custom-control-indicator"></span>
+                                             <span class="custom-control-description">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</span>
+                                        </label>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="col-lg-4">
+                         <div class="card card-warning widget" id="search-widget">
+                              <div class="card-header"><i class="material-icons">search</i> En çok arananlar</div>
+                              <ul class="list-group list-group-flush">
+                                   <li class="list-group-item">PHP <div class="tag tag-pill tag-default">24</div></li>
+                                   <li class="list-group-item">CSS <div class="tag tag-pill tag-default">24</div></li>
+                                   <li class="list-group-item">HTML <div class="tag tag-pill tag-default">24</div></li>
+                                   <li class="list-group-item">jQuery <div class="tag tag-pill tag-default">24</div></li>
+                                   <li class="list-group-item">PHP <div class="tag tag-pill tag-default">24</div></li>
+                                   <li class="list-group-item">CSS <div class="tag tag-pill tag-default">24</div></li>
+                                   <li class="list-group-item">HTML <div class="tag tag-pill tag-default">24</div></li>
+                                   <li class="list-group-item">jQuery <div class="tag tag-pill tag-default">24</div></li>
+                                   <li class="list-group-item">jQuery <div class="tag tag-pill tag-default">24</div></li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="col-lg-4">
+                         <div class="card card-warning widget" id="logs-widget">
+                              <div class="card-header"><i class="material-icons">event_note</i> Son Olaylar</div>
+                              <ul class="list-group list-group-flush">
+                                   <li class="list-group-item">
+                                        <i class="material-icons icon">comment</i>
+                                        <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="">
+                                        <div class="content">
+                                             <p><a href="">Ece Kuzucu</a> bir mesaj bıraktı.</p>
+                                             <p>
+                                                  <small>10 dakika önce</small>
+                                                  <small>192.168.2.1</small>
+                                             </p>
+                                        </div>
+                                   </li>
+                                   <li class="list-group-item">
+                                        <i class="material-icons icon">list</i>
+                                        <div class="content">
+                                             <p><a href="">Php Nedir?</a> başlıklı bir yazı eklendi.</p>
+                                             <p>
+                                                  <small>10 dakika önce</small>
+                                                  <small>192.168.2.1</small>
+                                             </p>
+                                        </div>
+                                   </li>
+                                   <li class="list-group-item">
+                                        <i class="material-icons icon">comment</i>
+                                        <img src="https://randomuser.me/api/portraits/men/24.jpg" alt="">
+                                        <div class="content">
+                                             <p><a href="">Kerim Erçetin</a>, <a href="">Php Nedir</a> başlıklı konuya yorum yaptı.</p>
+                                             <p>
+                                                  <small>10 dakika önce</small>
+                                                  <small>192.168.2.1</small>
+                                             </p>
+                                        </div>
+                                   </li>
+                                   <li class="list-group-item">
+                                        <i class="material-icons icon">lock</i>
+                                        <div class="content">
+                                             <p>Giriş Yapıldı</p>
+                                             <p>
+                                                  <small>10 dakika önce</small>
+                                                  <small>192.168.2.1</small>
+                                             </p>
+                                        </div>
+                                   </li>
+                                   <li class="list-group-item">
+                                        <i class="material-icons icon">lock</i>
+                                        <div class="content">
+                                             <p>Çıkış Yapıldı</p>
+                                             <p>
+                                                  <small>10 dakika önce</small>
+                                                  <small>192.168.2.1</small>
+                                             </p>
+                                        </div>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+
+
+
+
+          </div>
+     </div>
+
+</body>
+</html>

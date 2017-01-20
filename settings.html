@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>İbrahim ÖZTÜRK - Full Stack Developer</title>
+
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap-flex.min.css">
+     <link rel="stylesheet" href="assets/plugins/tether/css/tether.min.css">
+     <link rel="stylesheet" href="assets/plugins/jQueryFiler/css/jquery.filer.css">
+     <link rel="stylesheet" href="assets/plugins/toastr8/toastr8.min.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/tether/js/tether.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/jQueryFiler/js/jquery.filer.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/toastr8/toastr8.min.js"></script>
+     <script type="text/javascript" src="assets/js/app.js"></script>
+
+</head>
+<body>
+
+     <nav class="navbar navbar-light" id="menu">
+          <div class="container">
+               <a href="index.html" class="navbar-brand"><img src="https://secure.gravatar.com/avatar/efd3ffa5fedfce14ee1ab9709b37f237?s=64" alt=""></a>
+               <a href="index.html" class="navbar-brand hidden-xs-down">ibrahimozturk.me</a>
+               <form class="form-inline">
+                    <div class="input-group">
+                         <input type="text" name="q" class="form-control" placeholder="Ara...">
+                         <div class="input-group-btn dropdown hidden-xs-down">
+                              <button class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"><i class="material-icons">add</i></button>
+                              <div class="dropdown-menu">
+                                   <a href="add_article.html" class="dropdown-item">Yazı Ekle</a>
+                                   <a href="add_work.html" class="dropdown-item">Referans Ekle</a>
+                                   <a href="tags.html" class="dropdown-item">Etiket Ekle</a>
+                              </div>
+                         </div>
+                    </div>
+               </form>
+               <ul class="nav navbar-nav float-xs-right">
+                    <li class="nav-item hidden-md-up"><a href="" id="search-toggle" class="nav-link"><i class="material-icons">search</i></a></li>
+                    <li class="nav-item dropdown hidden-md-up">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">library_add</i></a>
+                         <div class="dropdown-menu dropdown-menu-right">
+                              <a href="add_article.html" class="dropdown-item">Yazı Ekle</a>
+                              <a href="add_work.html" class="dropdown-item">Referans Ekle</a>
+                              <a href="tags.html" class="dropdown-item">Etiket Ekle</a>
+                         </div>
+                    </li>
+                    <li class="nav-item dropdown ml-2">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">inbox</i> <span class="tag tag-pill tag-danger">1</span></a>
+                         <div class="dropdown-menu dropdown-menu-right wide">
+                              <div class="header">Gelen Kutusu <div class="tag tag-pill tag-danger">1</div></div>
+                              <div class="list-group">
+                                   <a href="" class="list-group-item list-group-item-warning">
+                                        <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Melike Babaoğlu <span class="time">10 dakika önce</span></p>
+                                             <p class="email">melike.babaoğlu@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Oğuzhan Çağıran <span class="time">10 dakika önce</span></p>
+                                             <p class="email">oğuzhan.çağıran@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Oya Aybar <span class="time">10 dakika önce</span></p>
+                                             <p class="email">oya.aybar@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                              </div>
+                              <a href="inbox.html" class="btn btnn-block btn-outline-secondary">Gelen kutusuna git</a>
+                         </div>
+                    </li>
+                    <li class="nav-item dropdown ml-2">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">notifications</i> <span class="tag tag-pill tag-danger">1</span></a>
+                         <div class="dropdown-menu dropdown-menu-right wide">
+                              <div class="header">Yorumlar <div class="tag tag-pill tag-danger">1</div></div>
+                              <div class="list-group">
+                                   <a href="" class="list-group-item list-group-item-warning">
+                                        <img src="https://randomuser.me/api/portraits/women/80.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Elif Mayhoş <span class="time">10 dakika önce</span></p>
+                                             <p class="email">ted.bryant54@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Deniz Ekşioğlu <span class="time">10 dakika önce</span></p>
+                                             <p class="email">deniz.ekşioğlu@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Efe Yetkiner <span class="time">10 dakika önce</span></p>
+                                             <p class="email">efe.yetkiner@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                              </div>
+                              <a href="comments.html" class="btn btnn-block btn-outline-secondary">Yorumlara git</a>
+                         </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+                         <div class="dropdown-menu dropdown-menu-right">
+                              <a href="articles.html" class="dropdown-item"><i class="material-icons">format_align_left</i> <span>Yazılar</span></a>
+                              <a href="works.html" class="dropdown-item"><i class="material-icons">work</i> <span>Referanslar</span></a>
+                              <a href="tags.html" class="dropdown-item"><i class="material-icons">label</i> <span>Etiketler</span></a>
+                              <div class="dropdown-divider"></div>
+                              <a href="settings.html" class="dropdown-item"><i class="material-icons">settings</i> <span>Ayarlar</span></a>
+                              <a href="login.html" class="dropdown-item"><i class="material-icons">exit_to_app</i> <span>Çıkış Yap</span></a>
+                         </div>
+                    </li>
+               </ul>
+          </div>
+     </nav>
+
+     <nav class="navbar navbar-light bg-faded" id="submenu">
+          <div class="container">
+               <div class="navbar-brand m-0">
+                    <p>Ayarlar</p>
+                    <small>Site ayarları</small>
+               </div>
+          </div>
+     </nav>
+
+     <div id="content" class="mt-2">
+          <div class="container">
+
+               <div class="row" id="inbox">
+
+                    <div class="col-lg-3">
+                         <ul class="nav nav-pills nav-stacked mb-2">
+                              <li class="nav-item"><a href="#temel" class="nav-link active" data-toggle="tab"><i class="material-icons">public</i> Temel</a></li>
+                              <li class="nav-item"><a href="#stil" class="nav-link" data-toggle="tab"><i class="material-icons">style</i> Stil</a></li>
+                              <li class="nav-item"><a href="#yonetici" class="nav-link" data-toggle="tab"><i class="material-icons">person</i> Yönetici</a></li>
+                              <li class="nav-item"><a href="#iletisim" class="nav-link" data-toggle="tab"><i class="material-icons">mail_outline</i> İletişim</a></li>
+                              <li class="nav-item"><a href="#bakim" class="nav-link" data-toggle="tab"><i class="material-icons">restore</i> Bakım Modu</a></li>
+                              <li class="nav-item"><a href="#gelismis" class="nav-link" data-toggle="tab"><i class="material-icons">settings</i> Gelişmiş</a></li>
+                         </ul>
+                    </div>
+
+                    <div class="col-lg-9">
+
+                         <div class="tab-content">
+                              <div id="temel" class="tab-pane active">
+
+                                   <div class="card">
+                                        <div class="card-block">
+
+                                             <div class="h5 mb-2">Temel</div>
+                                             <div class="row">
+                                                  <div class="col-lg-12">
+                                                       <div class="form-group">
+                                                            <label for="">Başlık</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Başlık">
+                                                       </div>
+
+                                                       <div class="form-group">
+                                                            <label for="">Açıklama</label>
+                                                            <textarea name="" id="" class="form-control" placeholder="Açıklama"></textarea>
+                                                       </div>
+
+                                                       <div class="form-group">
+                                                            <label for="">Etiketler</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Etiketler">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="form-group">
+                                                  <button class="btn btn-primary fab"><i class="material-icons">send</i></button>
+                                             </div>
+
+                                        </div>
+                                   </div>
+
+                              </div>
+                              <div id="stil" class="tab-pane">
+
+                                   <div class="card">
+                                        <div class="card-block">
+
+                                             <div class="row">
+                                                  <div class="col-lg-12">
+                                                       <div class="h5 mb-2">Stil</div>
+                                                  </div>
+                                                  <div class="col-lg-4">
+                                                       <div class="form-group">
+                                                            <label for="">Favicon</label>
+                                                            <input type="file" name="" id="">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-lg-4">
+                                                       <div class="form-group">
+                                                            <label for="">Logo</label>
+                                                            <input type="file" name="" id="">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-lg-4">
+                                                       <div class="form-group">
+                                                            <label for="">Arkaplan</label>
+                                                            <input type="file" name="" id="">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="form-group">
+                                                  <button class="btn btn-primary fab"><i class="material-icons">send</i></button>
+                                             </div>
+
+                                        </div>
+                                   </div>
+
+
+
+
+                              </div>
+                              <div id="yonetici" class="tab-pane">
+
+                                   <div class="card">
+                                        <div class="card-block">
+
+                                             <div class="row">
+                                                  <div class="col-lg-12">
+                                                       <div class="h5 mb-2">Yönetici</div>
+                                                  </div>
+                                                  <div class="col-lg-6">
+                                                       <div class="form-group">
+                                                            <label for="">Kullanıcı Adı</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Kullanıcı Adı">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-lg-6">
+                                                       <div class="form-group">
+                                                            <label for="">Şifre</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Şifre">
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+
+                                             <div class="form-group">
+                                                  <button class="btn btn-primary fab"><i class="material-icons">send</i></button>
+                                             </div>
+
+                                        </div>
+                                   </div>
+
+                              </div>
+
+                              <div id="iletisim" class="tab-pane">
+                                   <div class="card">
+                                        <div class="card-block">
+                                             <div class="row">
+                                                  <div class="col-lg-12">
+                                                       <div class="h5 mb-2">İletişim</div>
+                                                       <div class="clearfix form-group">
+                                                            <label class="d-block">İletişim Formu</label>
+                                                            <div class="btn-group d-block" data-toggle="buttons">
+                                                                 <label class="btn btn-outline-primary active"><input type="radio" name="options" id="option2" checked> Açık</label>
+                                                                 <label class="btn btn-outline-primary"><input type="radio" name="options" id="option3"> Kapalı</label>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-lg-6">
+                                                       <div class="form-group">
+                                                            <label for="">E-Posta Adresi</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="E-Posta Adresi">
+                                                       </div>
+                                                       <div class="form-group">
+                                                            <label for="">Facebook</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Facebook">
+                                                       </div>
+                                                       <div class="form-group">
+                                                            <label for="">Twitter</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Twitter">
+                                                       </div>
+                                                       <div class="form-group">
+                                                            <label for="">Google Plus</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Google Plus">
+                                                       </div>
+                                                       <div class="form-group">
+                                                            <label for="">Linkedin</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Linkedin">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-lg-6">
+                                                       <div class="form-group">
+                                                            <label for="">Telefon Numarası</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Telefon Numarası">
+                                                       </div>
+                                                       <div class="form-group">
+                                                            <label for="">Instagram</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Instagram">
+                                                       </div>
+                                                       <div class="form-group">
+                                                            <label for="">Snapchat</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Snapchat">
+                                                       </div>
+                                                       <div class="form-group">
+                                                            <label for="">Youtube</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Youtube">
+                                                       </div>
+                                                       <div class="form-group">
+                                                            <label for="">Whatsapp</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Whatsapp">
+                                                       </div>
+                                                  </div>
+                                             </div>
+
+                                             <div class="form-group">
+                                                  <button class="btn btn-primary fab"><i class="material-icons">send</i></button>
+                                             </div>
+
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div id="bakim" class="tab-pane">
+
+                                   <div class="card card-block">
+                                        <div class="row">
+                                             <div class="col-lg-12">
+                                                  <div class="h5 mb-2">Bakım Modu</div>
+                                                  <div class="clearfix form-group">
+                                                       <label class="d-block">Bakım Modu</label>
+                                                       <div class="btn-group d-block" data-toggle="buttons">
+                                                            <label class="btn btn-outline-danger active"><input type="radio" name="options" id="option2" checked> Açık</label>
+                                                            <label class="btn btn-outline-danger"><input type="radio" name="options" id="option3"> Kapalı</label>
+                                                       </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                       <label for="">Bakım  Modu Mesajı</label>
+                                                       <textarea name="" id="" class="form-control" placeholder="Bakım  Modu Mesajı"></textarea>
+                                                  </div>
+                                             </div>
+                                             <div class="form-group">
+                                                  <button class="btn btn-primary fab"><i class="material-icons">send</i></button>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                              </div>
+
+                              <div id="gelismis" class="tab-pane">
+
+                                   <div class="card">
+                                        <div class="card-block">
+
+                                             <div class="row">
+                                                  <div class="col-lg-12">
+                                                       <div class="h5 mb-2">Gelişmiş</div>
+                                                  </div>
+                                                  <div class="col-lg-6">
+                                                       <div class="form-group">
+                                                            <label for="">Google Analytics ID</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Google Analytics ID">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-lg-6">
+                                                       <div class="form-group">
+                                                            <label for="">Google Site Verification</label>
+                                                            <input type="text" name="" id="" class="form-control" placeholder="Google Site Verification">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="form-group">
+                                                  <button class="btn btn-primary fab"><i class="material-icons">send</i></button>
+                                             </div>
+
+                                        </div>
+                                   </div>
+
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </div>
+
+</body>
+</html>

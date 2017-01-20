@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>İbrahim ÖZTÜRK - Full Stack Developer</title>
+
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap-flex.min.css">
+     <link rel="stylesheet" href="assets/plugins/tether/css/tether.min.css">
+     <link rel="stylesheet" href="assets/plugins/jQueryFiler/css/jquery.filer.css">
+     <link rel="stylesheet" href="assets/plugins/toastr8/toastr8.min.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/tether/js/tether.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/jQueryFiler/js/jquery.filer.min.js"></script>
+     <script type="text/javascript" src="assets/plugins/toastr8/toastr8.min.js"></script>
+     <script type="text/javascript" src="assets/js/app.js"></script>
+
+</head>
+<body>
+
+     <nav class="navbar navbar-light" id="menu">
+          <div class="container">
+               <a href="index.html" class="navbar-brand"><img src="https://secure.gravatar.com/avatar/efd3ffa5fedfce14ee1ab9709b37f237?s=64" alt=""></a>
+               <a href="index.html" class="navbar-brand hidden-xs-down">ibrahimozturk.me</a>
+               <form class="form-inline">
+                    <div class="input-group">
+                         <input type="text" name="q" class="form-control" placeholder="Ara...">
+                         <div class="input-group-btn dropdown hidden-xs-down">
+                              <button class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"><i class="material-icons">add</i></button>
+                              <div class="dropdown-menu">
+                                   <a href="add_article.html" class="dropdown-item">Yazı Ekle</a>
+                                   <a href="add_work.html" class="dropdown-item">Referans Ekle</a>
+                                   <a href="tags.html" class="dropdown-item">Etiket Ekle</a>
+                              </div>
+                         </div>
+                    </div>
+               </form>
+               <ul class="nav navbar-nav float-xs-right">
+                    <li class="nav-item hidden-md-up"><a href="" id="search-toggle" class="nav-link"><i class="material-icons">search</i></a></li>
+                    <li class="nav-item dropdown hidden-md-up">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">library_add</i></a>
+                         <div class="dropdown-menu dropdown-menu-right">
+                              <a href="add_article.html" class="dropdown-item">Yazı Ekle</a>
+                              <a href="add_work.html" class="dropdown-item">Referans Ekle</a>
+                              <a href="tags.html" class="dropdown-item">Etiket Ekle</a>
+                         </div>
+                    </li>
+                    <li class="nav-item dropdown ml-2">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">inbox</i> <span class="tag tag-pill tag-danger">1</span></a>
+                         <div class="dropdown-menu dropdown-menu-right wide">
+                              <div class="header">Gelen Kutusu <div class="tag tag-pill tag-danger">1</div></div>
+                              <div class="list-group">
+                                   <a href="" class="list-group-item list-group-item-warning">
+                                        <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Melike Babaoğlu <span class="time">10 dakika önce</span></p>
+                                             <p class="email">melike.babaoğlu@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Oğuzhan Çağıran <span class="time">10 dakika önce</span></p>
+                                             <p class="email">oğuzhan.çağıran@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Oya Aybar <span class="time">10 dakika önce</span></p>
+                                             <p class="email">oya.aybar@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                              </div>
+                              <a href="inbox.html" class="btn btnn-block btn-outline-secondary">Gelen kutusuna git</a>
+                         </div>
+                    </li>
+                    <li class="nav-item dropdown ml-2">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">notifications</i> <span class="tag tag-pill tag-danger">1</span></a>
+                         <div class="dropdown-menu dropdown-menu-right wide">
+                              <div class="header">Yorumlar <div class="tag tag-pill tag-danger">1</div></div>
+                              <div class="list-group">
+                                   <a href="" class="list-group-item list-group-item-warning">
+                                        <img src="https://randomuser.me/api/portraits/women/80.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Elif Mayhoş <span class="time">10 dakika önce</span></p>
+                                             <p class="email">ted.bryant54@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Deniz Ekşioğlu <span class="time">10 dakika önce</span></p>
+                                             <p class="email">deniz.ekşioğlu@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                                   <a href="" class="list-group-item">
+                                        <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="">
+                                        <div class="content">
+                                             <p class="fullname">Efe Yetkiner <span class="time">10 dakika önce</span></p>
+                                             <p class="email">efe.yetkiner@example.com</p>
+                                             <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                                        </div>
+                                   </a>
+                              </div>
+                              <a href="comments.html" class="btn btnn-block btn-outline-secondary">Yorumlara git</a>
+                         </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="material-icons">more_vert</i></a>
+                         <div class="dropdown-menu dropdown-menu-right">
+                              <a href="articles.html" class="dropdown-item"><i class="material-icons">format_align_left</i> <span>Yazılar</span></a>
+                              <a href="works.html" class="dropdown-item"><i class="material-icons">work</i> <span>Referanslar</span></a>
+                              <a href="tags.html" class="dropdown-item"><i class="material-icons">label</i> <span>Etiketler</span></a>
+                              <div class="dropdown-divider"></div>
+                              <a href="settings.html" class="dropdown-item"><i class="material-icons">settings</i> <span>Ayarlar</span></a>
+                              <a href="login.html" class="dropdown-item"><i class="material-icons">exit_to_app</i> <span>Çıkış Yap</span></a>
+                         </div>
+                    </li>
+               </ul>
+          </div>
+     </nav>
+
+     <nav class="navbar navbar-light bg-faded" id="submenu">
+          <div class="container">
+               <div class="navbar-brand m-0">
+                    <p>Gelen Kutusu</p>
+                    <small>Yeni mesaj yok!</small>
+               </div>
+          </div>
+     </nav>
+
+     <div id="content" class="mt-2">
+          <div class="container">
+
+               <div class="row" id="inbox">
+
+                    <div class="col-lg-3">
+                         <ul class="nav nav-pills nav-stacked mb-2">
+                              <li class="nav-item"><a href="#freelance" class="nav-link active" data-toggle="tab"><i class="material-icons">work</i> Freelance <span class="tag tag-warning float-xs-right">5</span></a></li>
+                              <li class="nav-item"><a href="#ders" class="nav-link" data-toggle="tab"><i class="material-icons">bookmark</i> Ders <span class="tag tag-danger float-xs-right">5</span></a></li>
+                              <li class="nav-item"><a href="#oneri" class="nav-link" data-toggle="tab"><i class="material-icons">inbox</i> Öneri <span class="tag tag-success float-xs-right">5</span></a></li>
+                              <li class="nav-item"><a href="#sikayet" class="nav-link" data-toggle="tab"><i class="material-icons">warning</i> Şikayet <span class="tag tag-info float-xs-right">5</span>     </a></li>
+                         </ul>
+                    </div>
+
+                    <div class="col-lg-9">
+
+                         <div class="tab-content">
+                              <div id="freelance" class="tab-pane active">
+
+                                   <div class="list-group">
+                                        <div class="list-group-item " data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Melike Babaoğlu <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">melike.babaoğlu@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-warning" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Oğuzhan Çağıran <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">oğuzhan.çağıran@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-warning" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Oya Aybar <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">oya.aybar@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Gonca Karaduman <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">gonca.karaduman@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-warning" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Okan Limoncuoğlu <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">okan.limoncuoğlu@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/58.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Giray Gürmen <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">giray.gürmen@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-warning" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Coşkun Hamzaoğlu <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">coşkun.hamzaoğlu@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-warning" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/69.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Gül Kunter <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">gül.kunter@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/82.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Murat Ağaoğlu <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">murat.ağaoğlu@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                            </div>
+                                        </div>
+                                   </div>
+
+                              </div>
+                              <div id="ders" class="tab-pane">
+
+                                   <div class="list-group">
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/9.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Elif Egeli <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">elif.egeli@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-danger" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Vedat Nalbantoğlu <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">vedat.nalbantoğlu@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-danger" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Kübra Çatalbaş <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">kübra.çatalbaş@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Barış Erdoğan <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">barış.erdoğan@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-danger" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Emre Akyüz <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">emre.akyüz@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/78.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Ömür Yeşilkaya <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">ömür.yeşilkaya@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-danger" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/92.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Özsu Babaoğlu <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">özsu.babaoğlu@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-danger" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Mestan Karaer <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">mestan.karaer@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Eren Evliyaoğlu <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">eren.evliyaoğlu@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                              </div>
+                              <div id="oneri" class="tab-pane">
+
+                                   <div class="list-group">
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Ece Adal <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">ece.adal@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-success" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Barış Pektemek <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">barış.pektemek@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-success" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Gökhan Candan <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">gökhan.candan@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Mestan Sezek <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">mestan.sezek@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-success" data-id="2" data-toggle="modal" data-target="#read_mail"> <img src="https://randomuser.me/api/portraits/women/75.jpg" alt="">
+                                            <div class="content">
+                                                <p class="fullname">Gül Keçeci <span class="time">10 dakika önce</span>
+                                                </p>
+                                                <p class="email">gül.keçeci@example.com</p>
+                                                <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                            </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/74.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Ömür Yetkiner <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">ömür.yetkiner@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-success" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/93.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Efe Korol <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">efe.korol@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-success" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/38.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Gül Balaban <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">gül.balaban@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Ahmet Eronat <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">ahmet.eronat@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                              </div>
+                              <div id="sikayet" class="tab-pane">
+
+                                   <div class="list-group">
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/78.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Ayşe Erçetin <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">ayşe.erçetin@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-info" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/64.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Kuzey Sepetçi <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">kuzey.sepetçi@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-info" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Önal Keseroğlu <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">önal.keseroğlu@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/74.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Afet Nebioğlu <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">afet.nebioğlu@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-info" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Ülkü Pekkan <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">ülkü.pekkan@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/57.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Deniz Erberk <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">deniz.erberk@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-info" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Babür Erçetin <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">babür.erçetin@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item list-group-item-info" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Buse Durak <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">buse.durak@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                        <div class="list-group-item" data-id="2" data-toggle="modal" data-target="#read_mail">
+                                             <img src="https://randomuser.me/api/portraits/women/88.jpg" alt="">
+                                             <div class="content">
+                                                  <p class="fullname">Oya Taşçı <span class="time">10 dakika önce</span></p>
+                                                  <p class="email">oya.taşçı@example.com</p>
+                                                  <p class="message">Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir...</p>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </div>
+
+     <!-- Read -->
+     <div class="modal fade" id="read_mail" tabindex="-1">
+          <div class="modal-dialog modal-lg">
+               <div class="modal-content">
+                    <div class="modal-header email">
+                         <img src="https://secure.gravatar.com/avatar/efd3ffa5fedfce14ee1ab9709b37f237?s=64" alt="">
+                         <div class="content">
+                              <div class="fullname">İbrahim ÖZTÜRK</div>
+                              <div class="email">work@ibrahimozturk.me</div>
+                         </div>
+                    </div>
+                    <div class="modal-body">
+                         <div class="message">
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, eaque voluptate in velit illum. Eum, tempore blanditiis! Quibusdam culpa quis dolor officia minima similique a, fugit natus ab necessitatibus. Commodi! Tempora, tempore est quae. Quo molestiae minus non officia error quisquam tempore fugit sequi ipsum quibusdam sit, nostrum suscipit soluta ducimus veniam et, nam, delectus, est nulla in. Enim, placeat? Commodi obcaecati mollitia tenetur ratione omnis natus adipisci facere, dignissimos eaque ipsam sunt quas sed. Sequi temporibus incidunt soluta neque numquam excepturi similique doloremque, officia ducimus! Nesciunt consequuntur corporis commodi. Perferendis architecto, aliquid qui, a inventore veniam molestiae quisquam, nobis cumque ad rerum. Eligendi sequi cumque, nam earum ex excepturi quos perspiciatis maxime. Enim illo, quaerat, illum voluptatem repellat aspernatur?
+                         </div>
+                         <p class="detail">
+                              <span class="time">10 dakika önce</span>
+                              <span class="ip_address">127.0.0.1</span>
+                         </p>
+                    </div>
+                    <div class="modal-footer">
+                         <button type="button" class="btn btn-danger fab" data-toggle="tooltip" title="SİL"><i class="material-icons">delete</i></button>
+                         <button type="button" class="btn btn-secondary fab" class="close" data-dismiss="modal" data-toggle="tooltip" title="KAPAT"><i class="material-icons">close</i></button>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+</body>
+</html>
