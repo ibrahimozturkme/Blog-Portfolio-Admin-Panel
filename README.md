@@ -1,8 +1,7 @@
-# Blog-Portfolio-Admin-Panel
-Blog &amp; Portfolio Admin Panel
+# Blog & Portfolio Admin Panel
 
-![alt text](http://ibrahimozturk.me/assets/img/works/cover_1484926676.jpg "Logo Title Text 1")
+![alt text](https://ibrahimozturk.me/wp-content/uploads/2018/05/post_2.jpg "Blog & Portfolio Admin Panel")
 
-[Tanıtım Konusu](http://ibrahimozturk.me/is/2-ucretsiz-blog-portfolyo-yonetim-paneli)
+[Tanıtım Konusu](https://ibrahimozturk.me/blog-portfolio-admin-panel/)
 
 [Demo](https://ibrahimozturkme.github.io/Blog-Portfolio-Admin-Panel/)
